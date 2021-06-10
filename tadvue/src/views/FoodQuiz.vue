@@ -60,7 +60,7 @@
 
       <v-stepper-content step="3">
         <quizFood></quizFood>
-        <v-btn
+       <v-btn
             color="primary"
             onClick="window.location.reload()"
             role="button"
