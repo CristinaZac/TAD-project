@@ -23,17 +23,27 @@
       >
       </v-text-field>
 
-
-
 <!--first tab-->
       <v-tab-item class="mt-5">
+
         <v-row
           class="justify-center">
+          <v-row class="justify-center">
+            <v-card height="60px" width="94%"
+                    class="mb-5"
+                    role="legenda"
+            >
+              <v-card-text aria-label="Su alcune immagini è presente +s che suggerisce il plurale del vocabolo. <br>
+            Ad esempio: la parola prugna, che in inglese si traduce con plum, riporta +s, ciò vuol dire che il plurale sarà plums">Su alcune immagini è presente <strong>+s</strong> che suggerisce il plurale del vocabolo. <br>
+            Ad esempio: la parola prugna, che in inglese si traduce con plum, riporta +s, ciò vuol dire che il plurale sarà <strong>plums</strong>.</v-card-text>
+            </v-card>
+          </v-row>
+
+          <v-row>
     <v-dialog v-for="img in filteredListFood"
               :key="img.dialog"
               v-model="img.dialogstate"
         width="500">
-
       <template v-slot:activator="{ on, attrs }">
             <v-col class="align-content-center">
               <v-card
@@ -93,6 +103,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+          </v-row>
         </v-row>
 
       </v-tab-item>
@@ -167,6 +178,16 @@
       </v-tab-item>
       <!--  third tab-->
       <v-tab-item class="mt-5">
+        <v-row class="justify-center">
+          <v-card height="60px" width="94%"
+                  class="mb-5"
+                  role="legenda"
+          >
+            <v-card-text aria-label="Su alcune immagini è presente +s che suggerisce il plurale del vocabolo. <br>
+            Ad esempio: la parola prugna, che in inglese si traduce con plum, riporta +s, ciò vuol dire che il plurale sarà plums">Su alcune immagini è presente <strong>+s</strong> che suggerisce il plurale del vocabolo. <br>
+              Ad esempio: la parola prugna, che in inglese si traduce con plum, riporta +s, ciò vuol dire che il plurale sarà <strong>plums</strong>.</v-card-text>
+          </v-card>
+        </v-row>
         <v-row
             class="justify-center">
           <v-dialog v-for="img in filteredListAnimal"
@@ -316,7 +337,7 @@ export default {
         {
           dialogstate: false,
           dialog: "dialog1",
-          image: require('@/assets/CAA Foods/bananas.png'),
+          image: require('@/assets/CAA Foods/banana.png'),
           english: "banana",
           italian: "banana",
           alt: "banane"
@@ -705,7 +726,7 @@ export default {
           dialogstate: false,
           dialog: "dialog49",
           image: require('@/assets/CAA Animals/sea horses.png'),
-          english: "horses",
+          english: "seahorse",
           italian: "cavalluccio marino",
           alt: "a sea horse, un cavalluccio marino"
         },

@@ -53,7 +53,7 @@
             <v-btn
                 color="deep-purple"
                 dark
-                to="/memorygame"
+                to="/pregameaction"
                 role="button"
             >
               Gioca
@@ -110,7 +110,7 @@
             <v-btn
                 color="deep-purple"
                 dark
-                to="/animalmemory"
+        to="/pregame"
                 role="button"
                 class="mt-3"
             >

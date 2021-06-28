@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="mb-5" aria-label="Animals memory game">Animals Memory Game</h2>
+    <h2 class="mb-5" aria-label="action memory game">Actions Memory Game</h2>
     <div class="row">
       <div class="col-md-6 col-lg-6 col-xl-5 mx-auto">
         <div class="row justify-content-md-center">
@@ -15,14 +15,15 @@
               <div class="back rounded border"></div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
     <v-row justify="center">
       <v-btn
+          class="mb-10"
           role="button"
           dark
-          class="mb-10 mr-4"
           color="deep-purple"
           onClick="window.location.reload()"
           aria-label="gioca ancora"
@@ -36,7 +37,7 @@ import Vue from 'vue';
 import _ from 'lodash';
 
 export default {
-  name: "FoodMemory",
+  name: "ActionMedium",
   data() {
     return {
       finish: false,
@@ -44,134 +45,55 @@ export default {
       flippedCards: [],
       cards: [
         {
-          dialogstate: false,
-          dialog: "dialog35",
-          image: require('@/assets/CAA Animals/butterfly.png'),
-          english: "butterfly",
-          italian: "farfalla",
-          alt: "a butterfly, una farfalla"
+          image: require('@/assets/CAA Action/high five.png'),
+          english: "to give high five",
+          italian: "battere il cinque",
+          alt: "due persone che si danno il cinque, two people giving high five"
         },
         {
-          dialogstate: false,
-          dialog: "dialog36",
-          image: require('@/assets/CAA Animals/crocodile.png'),
-          english: "crocodile",
-          italian: "coccodrillo",
-          alt: "a crocodile, un coccodrillo"
+          image: require('@/assets/CAA Action/listen to music.png'),
+          english: "to listen to music",
+          italian: "ascoltare la musica",
+          alt: "una persona che ascolta la musica, a person listening to music"
         },
         {
-          dialogstate: false,
-          dialog: "dialog37",
-          image: require('@/assets/CAA Animals/ducks.png'),
-          english: "duck",
-          italian: "anatra",
-          alt: "a duck, un'anatra"
+          image: require('@/assets/CAA Action/study.png'),
+          english: "to study",
+          italian: "studiare",
+          alt: "una persona che studia, a person studying"
         },
         {
-          dialogstate: false,
-          dialog: "dialog38",
-          image: require('@/assets/CAA Animals/fly.png'),
-          english: "fly",
-          italian: "mosca",
-          alt: "a fly, una mosca"
+          image: require('@/assets/CAA Action/to applaud.png'),
+          english: "to clap",
+          italian: "applaudire",
+          alt: "una persona che applaude, a person clapping"
         },
         {
-          dialogstate: false,
-          dialog: "dialog39",
-          image: require('@/assets/CAA Animals/frog.png'),
-          english: "frog",
-          italian: "rana",
-          alt: "a frog, una rana"
+          image: require('@/assets/CAA Action/to dance.png'),
+          english: "to dance",
+          italian: "ballare",
+          alt: "una persona che balla, a person dancing"
         },
         {
-          dialogstate: false,
-          dialog: "dialog40",
-          image: require('@/assets/CAA Animals/giant turtle.png'),
-          english: "turtle",
-          italian: "tartaruga",
-          alt: "a turtle, una tartaruga"
+          image: require('@/assets/CAA Action/to infect.png'),
+          english: "to infect",
+          italian: "infettare",
+          alt: "infettare qualcuno, to infect somebody"
         },
         {
-          dialogstate: false,
-          dialog: "dialog41",
-          image: require('@/assets/CAA Animals/hedgehog.png'),
-          english: "hedgehog",
-          italian: "riccio",
-          alt: "a hedgehog, un riccio"
+          image: require('@/assets/CAA Action/to play basketball.png'),
+          english: "to play basketball",
+          italian: "giocare a basket",
+          alt: "due persone giocano a basket, two people playing basketball"
         },
         {
-          dialogstate: false,
-          dialog: "dialog42",
-          image: require('@/assets/CAA Animals/horses.png'),
-          english: "horse",
-          italian: "cavallo",
-          alt: "a horse, un cavallo"
+          image: require('@/assets/CAA Action/to talk.png'),
+          english: "to talk",
+          italian: "parlare",
+          alt: "due persone che parlano, two people talking"
         },
-        {
-          dialogstate: false,
-          dialog: "dialog43",
-          image: require('@/assets/CAA Animals/lion.png'),
-          english: "lion",
-          italian: "leone",
-          alt: "a lion, un leone"
-        },
-        {
-          dialogstate: false,
-          dialog: "dialog44",
-          image: require('@/assets/CAA Animals/octopuses.png'),
-          english: "octopus",
-          italian: "polipo",
-          alt: "an octopus, un polipo"
-        },
-        {
-          dialogstate: false,
-          dialog: "dialog45",
-          image: require('@/assets/CAA Animals/owl.png'),
-          english: "owl",
-          italian: "gufo",
-          alt: "an owl, un gufo"
-        },
-        {
-          dialogstate: false,
-          dialog: "dialog46",
-          image: require('@/assets/CAA Animals/parrot.png'),
-          english: "parrot",
-          italian: "pappagallo",
-          alt: "a parrot, un pappagallo"
-        },
-        {
-          dialogstate: false,
-          dialog: "dialog47",
-          image: require('@/assets/CAA Animals/pigeon.png'),
-          english: "pigeon",
-          italian: "piccione",
-          alt: "a pidgeon, un piccione"
-        },
-        {
-          dialogstate: false,
-          dialog: "dialog48",
-          image: require('@/assets/CAA Animals/rooster.png'),
-          english: "rooster",
-          italian: "gallo",
-          alt: "a rooster, un gallo"
-        },
-        {
-          dialogstate: false,
-          dialog: "dialog49",
-          image: require('@/assets/CAA Animals/sea horses.png'),
-          english: "seahorse",
-          italian: "cavalluccio marino",
-          alt: "a sea horse, un cavalluccio marino"
-        },
-        {
-          dialogstate: false,
-          dialog: "dialog50",
-          image: require('@/assets/CAA Animals/cat.png'),
-          english: "cat",
-          italian: "gatto",
-          alt: "a cat, un gatto"
-        },
-      ],
+
+      ]
     }
   },
   created() {
@@ -182,8 +104,9 @@ export default {
     /*
       let cards1 =  _.cloneDeep(this.cards);
       let cards2 =  _.cloneDeep(this.cards);*/
-    this.cardsSelected = _.shuffle(this.cards).slice(0, 4)
+    this.cardsSelected = _.shuffle(this.cards).slice(0, 6)
     this.memoryCards = _.shuffle(this.memoryCards.concat(_.cloneDeep(this.cardsSelected), _.cloneDeep(this.cardsSelected)));
+
   },
   methods: {
     flipCard(card) {

@@ -36,7 +36,7 @@ import Vue from 'vue';
 import _ from 'lodash';
 
 export default {
-  name: "FoodMemory",
+  name: "AMemoryMedium",
   data() {
     return {
       finish: false,
@@ -182,7 +182,7 @@ export default {
     /*
       let cards1 =  _.cloneDeep(this.cards);
       let cards2 =  _.cloneDeep(this.cards);*/
-    this.cardsSelected = _.shuffle(this.cards).slice(0, 4)
+    this.cardsSelected = _.shuffle(this.cards).slice(0, 6)
     this.memoryCards = _.shuffle(this.memoryCards.concat(_.cloneDeep(this.cardsSelected), _.cloneDeep(this.cardsSelected)));
   },
   methods: {

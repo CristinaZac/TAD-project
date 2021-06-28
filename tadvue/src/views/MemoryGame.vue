@@ -104,7 +104,9 @@ name: "MemoryGame",
   /*
     let cards1 =  _.cloneDeep(this.cards);
     let cards2 =  _.cloneDeep(this.cards);*/
-    this.memoryCards = _.shuffle(this.memoryCards.concat(_.cloneDeep(this.cards), _.cloneDeep(this.cards)));
+    this.cardsSelected = _.shuffle(this.cards).slice(0, 4)
+    this.memoryCards = _.shuffle(this.memoryCards.concat(_.cloneDeep(this.cardsSelected), _.cloneDeep(this.cardsSelected)));
+
   },
   methods: {
     flipCard(card) {

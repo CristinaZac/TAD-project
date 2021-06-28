@@ -66,6 +66,54 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "FoodMemory" */ '../views/AnimalMemory')
   },
+  {
+    path: '/PreGame',
+    name: 'PreGame',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "FoodMemory" */ '../views/PreGame')
+  },
+  {
+    path: '/AMemoryMedium',
+    name: 'AMemoryMedium',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "FoodMemory" */ '../views/AMemoryMedium')
+  },
+  {
+    path: '/AMemoryDiff',
+    name: 'AMemoryDiff',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "FoodMemory" */ '../views/AMemoryDiff')
+  },
+  {
+    path: '/PreGameAction',
+    name: 'PreGameAction',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "FoodMemory" */ '../views/PreGameAction')
+  },
+  {
+    path: '/ActionMedium',
+    name: 'ActionMedium',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "FoodMemory" */ '../views/ActionMedium')
+  },
+  {
+    path: '/ActionDiff',
+    name: 'ActionDiff',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "FoodMemory" */ '../views/ActionDiff')
+  },
 
 ]
 
